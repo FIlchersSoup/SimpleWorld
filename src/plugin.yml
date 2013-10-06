@@ -1,0 +1,23 @@
+name: SimpleWorld
+main: com.digitalbrainery.SimpleWorld.SimpleWorld
+version: 0.0.1-ALPHA
+website: meloncraft.likes-pie.com
+description: Simple World Management Plugin for CraftBukkit
+authors: [FilchersSoup]
+
+commands:
+  vhunter:
+    description: Base command for SimpleWorld
+    usage: /simpleworld <command>
+    aliases: [sw,sworld]
+    
+
+permissions:
+  simpleworld.*:
+    description: Give players with op everything by default
+    default: op
+    children:
+      simpleworld.basic: true
+  simpleworld.basic:
+    description: The most basic command
+    default: op
